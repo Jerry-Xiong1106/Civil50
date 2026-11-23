@@ -1,0 +1,7 @@
+{
+  "file": "vector_metadata.npz",
+  "sha256": "30612c9347dcd039f8ae86fc3b7c08475184baa9b0e4dc9e218b4e497886e106",
+  "count": 1690,
+  "civra_commit": "2058d23791ffd1299d441758f41a1635edbc4bb2",
+  "branch": "feature/evaluation-handoff-nov21"
+}

@@ -1,0 +1,114 @@
+{
+  "request": {
+    "model": null,
+    "temperature": 0.0,
+    "max_tokens": null,
+    "seed": null,
+    "tools": [
+      "ask_user",
+      "build_visualization",
+      "calculate_costs",
+      "check_evidence",
+      "compare_routes",
+      "find_form_template",
+      "finish",
+      "get_route_workflow",
+      "parse_documents",
+      "search_statutes",
+      "update_case",
+      "verify_output"
+    ],
+    "messages": [
+      {
+        "role": "system",
+        "content": "你是 CivRA，帮助中国内地用户理解和处理民事纠纷。\n区分用户陈述、材料记载和已核实事实。不知道、未提供或未上传的保留未知，不补造事实、法律依据或外部处理结果；只有用户明确否认才记为没有。\n需要法律依据时检索并核对适用范围，只引用工具实际返回的来源。工具返回候选不代表法律结论成立；失败或信息不足时说明实际限制，不盲目重复调用，错误参数按工具返回修正。\n只问推进当前事项必需、且工具查不到的信息，一次问最关键的一两个；已知的不重问。先读已上传的材料，再问缺口。recent_uploaded_files 只说明文件已收到，需要内容时调用 parse_documents。\n涉及保存、生成、核验等操作，只有工具成功执行后才称已完成。不给出无依据的胜诉概率。\n回答用中文，结构清楚，可以使用 Markdown。"
+      },
+      {
+        "role": "system",
+        "content": "当前案件状态（由系统提供，每次调用时更新）：\n{\"case_id\":\"case_57d52d1ac21749879185b6d7d3f88d47\",\"case_version\":4,\"stage\":\"consultation\",\"jurisdiction\":\"CN-Mainland\",\"statements\":[{\"message_id\":\"runtime_msg_c6cfef9e85f26f5ddd29f27ef0695e9f\",\"actor_id\":\"api_user\",\"text\":\"配件都是跟一个人对接的，催款应该找他还是公司？\\n准备一份调解陈述、材料清单及结果核对表。\\n请逐项注明信息来自哪份材料，列明仍需核实的内容。\",\"created_at\":\"2026-11-22T08:44:34.220961Z\"},{\"message_id\":\"runtime_msg_c5f64f4a0ec585704e01cb326d98e131\",\"actor_id\":\"api_user\",\"text\":\"问：有关于往来人员的记录吗？\\n答：原告陈述与一名个人有多次业务往来。\\n用户补充上传了材料：file_6cc4dcbef1c84fa8a15c5f6d23a18372\\n\\n用户提交的已上传材料引用（尚未解析或核验）：\\n[{\\\"case_id\\\": \\\"case_57d52d1ac21749879185b6d7d3f88d47\\\", \\\"file_id\\\": \\\"file_6cc4dcbef1c84fa8a15c5f6d23a18372\\\", \\\"file_version\\\": \\\"1\\\", \\\"file_name\\\": \\\"note-1.txt\\\", \\\"media_type\\\": \\\"text/plain\\\", \\\"document_type\\\": \\\"material\\\", \\\"content_sha256\\\": \\\"19ba5bddd4e5ff687cc77d541d031fc827086f5949988bf805a443bee53d38ac\\\", \\\"size_bytes\\\": 108}]\",\"created_at\":\"2026-11-22T08:44:34.283707Z\"},{\"message_id\":\"runtime_msg_c80a73957cfd0e094388d2a3c4507d8d\",\"actor_id\":\"api_user\",\"text\":\"问：有关于结算主体的记录吗？\\n答：对账方为机械设备公司，原告称有5000元未付。\\n用户补充上传了材料：file_d46cae4c6c48489eac947bee49f57400\\n\\n用户提交的已上传材料引用（尚未解析或核验）：\\n[{\\\"case_id\\\": \\\"case_57d52d1ac21749879185b6d7d3f88d47\\\", \\\"file_id\\\": \\\"file_d46cae4c6c48489eac947bee49f57400\\\", \\\"file_version\\\": \\\"1\\\", \\\"file_name\\\": \\\"note-2.txt\\\", \\\"media_type\\\": \\\"text/plain\\\", \\\"document_type\\\": \\\"material\\\", \\\"content_sha256\\\": \\\"06287b0cc6f19e856bd2f44e87fa63f3350176930abbfe0fe9c4d12f2edc134c\\\", \\\"size_bytes\\\": 118}]\",\"created_at\":\"2026-11-22T08:44:34.355327Z\"}],\"recent_uploaded_files\":[{\"file_id\":\"file_d46cae4c6c48489eac947bee49f57400\",\"file_version\":\"1\",\"file_name\":\"note-2.txt\",\"document_type\":\"material\"},{\"file_id\":\"file_6cc4dcbef1c84fa8a15c5f6d23a18372\",\"file_version\":\"1\",\"file_name\":\"note-1.txt\",\"document_type\":\"material\"}]}"
+      },
+      {
+        "role": "system",
+        "content": "当前阶段：了解情况（用户尚未选择处理路线）。\n回答用户的问题。了解到用户面对的是现实纠纷后，可调用 compare_routes 比较协商、调解、诉讼三条路线，结合本案给出建议，并提醒用户在界面上点击对应的路线入口开始办理。不要声称已经进入某条路线。\n\n记录用户陈述的事实：案件状态 statements 中的用户陈述含有与纠纷有关的具体事实（日期、地点、当事人、金额、责任认定、保险、借款或合同情况等），而 facts 中尚无对应的有效事实时，先调用一次 update_case 把本轮新事实一并保存，再做其他操作。\n每条事实：field 用下列规范字段名（没有合适的才自拟简短英文名）；provenance=\"user_statement\"；statement_refs 填载有该陈述的 statements[].message_id；fact_id 自拟且在案件内唯一（如 fact_accident_date_1）。\n确认：默认 confirmation_status=\"unconfirmed\"。用户明确确认记录内容（如“以上信息确认无误”）时，用 confirmation_status=\"confirmed\" 并填 confirmation.message_id（那条确认消息的 message_id）。起诉状只能使用已确认的事实。\n只记录用户说过或认可的内容：材料里读到的信息先请用户核对，用户认可后按用户陈述记录；不要使用 document_record 或 derived。管辖法院等由你判断得出的结论不是事实，不要入档，在回答里说明并请用户确认。\n取值：date 用 \"YYYY-MM-DD\"；money 用 {\"amount\":\"8000\",\"currency\":\"CNY\"}；其余用 text 原样记录用户说法，不推断、不补全（只说“王某”就记“王某”；只说“10月8日”而无年份时不要猜年份，用 text 记录原话）。\n案由明确时（机动车交通事故 traffic_accident、民间借贷 private_lending、买卖合同 sales_contract，其他 other），在同一次 update_case 里用 changes.dispute_type 记下；案件状态里已是同一类型就不重复。起诉状模板按案由选择，案由为空时无法生成。\n已有事实内容改变时新增 fact_id，并把旧事实的 superseded_by 设为新 fact_id；不要修改旧事实的取值。保存失败时按返回错误修正一次，仍失败则在回答中说明哪些信息未能保存。\n规范字段名：\n通用：claimant_name=原告姓名或名称，claimant_identity=原告身份与主体信息，claimant_contact=原告住所及联系方式，defendant_name=被告姓名或名称，defendant_identity=被告身份与主体信息，defendant_contact=被告住所及联系方式，representative=诉讼代理信息（无代理人时需明确确认），court_name=拟提交法院（需核实管辖），mediation_preference=对先行调解的意愿\n机动车交通事故责任纠纷（traffic_accident）：accident_date=事故日期，accident_location=事故地点及经过，vehicles=涉事车辆及人员信息，liability_finding=责任认定记载及认定书信息，insurance=保险投保情况，loss_details=损失项目、金额及计算说明\n民间借贷纠纷（private_lending）：loan_agreement=借贷约定及合同/借据情况，loan_principal=主张本金，loan_delivery=款项交付时间、方式及凭证，repayment_agreement=还款期限及约定，repayment_history=已还本金、利息及明细，interest_agreement=利息、违约金约定及计算请求，guarantee=担保情况（无担保时需明确确认），jurisdiction_agreement=仲裁或管辖约定\n买卖合同纠纷（sales_contract）：contract_details=买卖合同名称、签订情况及当事人角色，subject_matter=标的物、规格及数量，price_agreement=价款和付款约定，delivery_history=交付、收货及验收情况，payment_history=已付款、欠款及明细，breach_details=违约、质量或履行争议，performance_demands=催告或协商情况，jurisdiction_agreement=仲裁或管辖约定\n金额明细（money）：repair_amount=维修金额，medical_amount=医疗金额，towing_amount=拖车金额，appraisal_amount=鉴定金额"
+      },
+      {
+        "role": "system",
+        "content": "当前运行限制（由程序提供）：\n{\"search_calls\": 0, \"max_search_calls\": 8, \"clarification_rounds\": 2, \"max_clarification_rounds\": 3, \"max_questions_per_round\": 2, \"remaining_budget\": {\"tool_calls\": 20, \"tokens\": 200000}}\n检索语料范围：已登记的民法典、民事诉讼法、道路交通安全法版本；不含完整类案库和所有程序、收费依据。超出范围时说明限制。\n"
+      },
+      {
+        "role": "user",
+        "content": "配件都是跟一个人对接的，催款应该找他还是公司？\n准备一份调解陈述、材料清单及结果核对表。\n请逐项注明信息来自哪份材料，列明仍需核实的内容。"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_213",
+            "type": "function",
+            "function": {
+              "name": "ask_user",
+              "arguments": "{\"kind\": \"material_request\", \"questions\": [{\"question_id\": \"F1\", \"text\": \"有关于往来人员的记录吗？\"}]}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": "{\"status\":\"ok\",\"summary\":\"已发送给用户，等待回复。\"}",
+        "tool_call_id": "call_213"
+      },
+      {
+        "role": "user",
+        "content": "问：有关于往来人员的记录吗？\n答：原告陈述与一名个人有多次业务往来。\n用户补充上传了材料：file_6cc4dcbef1c84fa8a15c5f6d23a18372\n\n用户提交的已上传材料引用（尚未解析或核验）：\n[{\"case_id\": \"case_57d52d1ac21749879185b6d7d3f88d47\", \"file_id\": \"file_6cc4dcbef1c84fa8a15c5f6d23a18372\", \"file_version\": \"1\", \"file_name\": \"note-1.txt\", \"media_type\": \"text/plain\", \"document_type\": \"material\", \"content_sha256\": \"19ba5bddd4e5ff687cc77d541d031fc827086f5949988bf805a443bee53d38ac\", \"size_bytes\": 108}]"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_214",
+            "type": "function",
+            "function": {
+              "name": "ask_user",
+              "arguments": "{\"kind\": \"material_request\", \"questions\": [{\"question_id\": \"F2\", \"text\": \"有关于结算主体的记录吗？\"}]}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "content": "{\"status\":\"ok\",\"summary\":\"已发送给用户，等待回复。\"}",
+        "tool_call_id": "call_214"
+      },
+      {
+        "role": "user",
+        "content": "问：有关于结算主体的记录吗？\n答：对账方为机械设备公司，原告称有5000元未付。\n用户补充上传了材料：file_d46cae4c6c48489eac947bee49f57400\n\n用户提交的已上传材料引用（尚未解析或核验）：\n[{\"case_id\": \"case_57d52d1ac21749879185b6d7d3f88d47\", \"file_id\": \"file_d46cae4c6c48489eac947bee49f57400\", \"file_version\": \"1\", \"file_name\": \"note-2.txt\", \"media_type\": \"text/plain\", \"document_type\": \"material\", \"content_sha256\": \"06287b0cc6f19e856bd2f44e87fa63f3350176930abbfe0fe9c4d12f2edc134c\", \"size_bytes\": 118}]"
+      }
+    ]
+  },
+  "response": {
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "call_215",
+        "tool_name": "finish",
+        "arguments": {
+          "answer": "接口测试：已接收本轮材料。"
+        }
+      }
+    ],
+    "finish_reason": "tool_calls",
+    "usage": {
+      "prompt_tokens": 100,
+      "completion_tokens": 20,
+      "total_tokens": 120,
+      "cached_tokens": null,
+      "attempt_count": 1
+    },
+    "cost": null,
+    "model": "scripted",
+    "provider_request_id": null,
+    "latency_ms": 0
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "2-25": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/25"
+  },
+  "2-30": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/30"
+  },
+  "4-99": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/99"
+  },
+  "8-27": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/27"
+  },
+  "8-35": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/35"
+  },
+  "8-37": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/37"
+  },
+  "8-84": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/84"
+  },
+  "9-47": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/9.json",
+    "file_sha256": "94bc4ed8c05cd6591bc71b5197e6476a361d6e03a6297762d642bb7493fc4224",
+    "pointer": "/ctxs/47"
+  },
+  "8-q": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/query_case"
+  },
+  "2-71": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/71"
+  },
+  "3-12": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/12"
+  },
+  "4-40": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/40"
+  },
+  "5-53": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/5.json",
+    "file_sha256": "ad32791a810f18132c8026159a9e13a325c6b0af7436a8b27f590bcf36e7c340",
+    "pointer": "/ctxs/53"
+  },
+  "0-18": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/0.json",
+    "file_sha256": "3f9eb5fc587e960b5b62ded443cb165c2e032cecba25a5c6d116e2a5a83bb345",
+    "pointer": "/ctxs/18"
+  },
+  "1-38": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/1.json",
+    "file_sha256": "d2c5c5cba1332ca2d83511834782aa7cf184a51541c2895ff7b56b705e9681b2",
+    "pointer": "/ctxs/38"
+  },
+  "1-71": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/1.json",
+    "file_sha256": "d2c5c5cba1332ca2d83511834782aa7cf184a51541c2895ff7b56b705e9681b2",
+    "pointer": "/ctxs/71"
+  },
+  "2-42": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/42"
+  },
+  "2-94": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/94"
+  },
+  "3-30": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/30"
+  },
+  "4-63": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/63"
+  },
+  "5-0": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/5.json",
+    "file_sha256": "ad32791a810f18132c8026159a9e13a325c6b0af7436a8b27f590bcf36e7c340",
+    "pointer": "/ctxs/0"
+  },
+  "5-38": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/5.json",
+    "file_sha256": "ad32791a810f18132c8026159a9e13a325c6b0af7436a8b27f590bcf36e7c340",
+    "pointer": "/ctxs/38"
+  },
+  "6-88": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/6.json",
+    "file_sha256": "03009be57cec334a213d1629a65621ba857a6f5786bdb42b590482720b70931d",
+    "pointer": "/ctxs/88"
+  },
+  "7-35": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/35"
+  },
+  "8-99": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/99"
+  },
+  "9-77": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/9.json",
+    "file_sha256": "94bc4ed8c05cd6591bc71b5197e6476a361d6e03a6297762d642bb7493fc4224",
+    "pointer": "/ctxs/77"
+  },
+  "1-59": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/1.json",
+    "file_sha256": "d2c5c5cba1332ca2d83511834782aa7cf184a51541c2895ff7b56b705e9681b2",
+    "pointer": "/ctxs/59"
+  },
+  "2-39": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/2.json",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "pointer": "/ctxs/39"
+  },
+  "3-98": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/98"
+  },
+  "4-47": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/47"
+  },
+  "6-59": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/6.json",
+    "file_sha256": "03009be57cec334a213d1629a65621ba857a6f5786bdb42b590482720b70931d",
+    "pointer": "/ctxs/59"
+  },
+  "6-76": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/6.json",
+    "file_sha256": "03009be57cec334a213d1629a65621ba857a6f5786bdb42b590482720b70931d",
+    "pointer": "/ctxs/76"
+  },
+  "7-2": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/2"
+  },
+  "7-23": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/23"
+  },
+  "7-55": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/55"
+  },
+  "7-90": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/90"
+  },
+  "7-98": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/98"
+  },
+  "8-62": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/62"
+  },
+  "0-96": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/0.json",
+    "file_sha256": "3f9eb5fc587e960b5b62ded443cb165c2e032cecba25a5c6d116e2a5a83bb345",
+    "pointer": "/ctxs/96"
+  },
+  "1-28": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/1.json",
+    "file_sha256": "d2c5c5cba1332ca2d83511834782aa7cf184a51541c2895ff7b56b705e9681b2",
+    "pointer": "/ctxs/28"
+  },
+  "3-17": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/17"
+  },
+  "3-37": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/37"
+  },
+  "5-14": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/5.json",
+    "file_sha256": "ad32791a810f18132c8026159a9e13a325c6b0af7436a8b27f590bcf36e7c340",
+    "pointer": "/ctxs/14"
+  },
+  "6-28": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/6.json",
+    "file_sha256": "03009be57cec334a213d1629a65621ba857a6f5786bdb42b590482720b70931d",
+    "pointer": "/ctxs/28"
+  },
+  "7-97": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/97"
+  },
+  "1-83": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/1.json",
+    "file_sha256": "d2c5c5cba1332ca2d83511834782aa7cf184a51541c2895ff7b56b705e9681b2",
+    "pointer": "/ctxs/83"
+  },
+  "4-4": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/4"
+  },
+  "7-60": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/60"
+  },
+  "7-11": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/7.json",
+    "file_sha256": "a02aef80e81e3b32a9924a057ab4bd185a98f31733046b0c841114f63763cbdc",
+    "pointer": "/ctxs/11"
+  },
+  "5-94": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/5.json",
+    "file_sha256": "ad32791a810f18132c8026159a9e13a325c6b0af7436a8b27f590bcf36e7c340",
+    "pointer": "/ctxs/94"
+  },
+  "3-84": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/3.json",
+    "file_sha256": "f60d0b5367fab662da5abfcf3a90d9744671b5b40098b12e1b35a0ab1e3a30fb",
+    "pointer": "/ctxs/84"
+  },
+  "8-98": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/98"
+  },
+  "8-56": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/8.json",
+    "file_sha256": "60b84cc5f5afa877e30d4927e4f11fa49adfdecb72db00e3248a46d33bdda9f2",
+    "pointer": "/ctxs/56"
+  },
+  "4-49": {
+    "publisher": "YeFD/MileCut",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "path": "dataset/C3RD_mini/4.json",
+    "file_sha256": "909ea067015776b7484ba66802ccb83f58ab8ead39ef9ff73d40d9d426f726f2",
+    "pointer": "/ctxs/49"
+  },
+  "case_cn_0006": {
+    "publisher": "SKYLENAGE-AI/DLawBench",
+    "commit": "9f6325f29f07b296fac110a6e1880bdd5d9ca538",
+    "path": "data/case_backgrounds/cases_cn.jsonl",
+    "file_sha256": "11e16b7d0bf68f8ddab706cda2c5ecdcd4cb4e8937bb8ba1f9f5148626571528",
+    "pointer": "line:6"
+  },
+  "case_cn_0007": {
+    "publisher": "SKYLENAGE-AI/DLawBench",
+    "commit": "9f6325f29f07b296fac110a6e1880bdd5d9ca538",
+    "path": "data/case_backgrounds/cases_cn.jsonl",
+    "file_sha256": "11e16b7d0bf68f8ddab706cda2c5ecdcd4cb4e8937bb8ba1f9f5148626571528",
+    "pointer": "line:7"
+  },
+  "case_cn_0020": {
+    "publisher": "SKYLENAGE-AI/DLawBench",
+    "commit": "9f6325f29f07b296fac110a6e1880bdd5d9ca538",
+    "path": "data/case_backgrounds/cases_cn.jsonl",
+    "file_sha256": "11e16b7d0bf68f8ddab706cda2c5ecdcd4cb4e8937bb8ba1f9f5148626571528",
+    "pointer": "line:20"
+  }
+}

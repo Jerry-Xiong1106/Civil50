@@ -1,0 +1,13 @@
+{
+  "case_families": 50,
+  "development": 10,
+  "heldout_drafts": 40,
+  "upstream_records": 57,
+  "checked_against_original_files": true,
+  "located_materials": 100,
+  "index_provisions": 1690,
+  "protocol_replays": 50,
+  "independent_upload_receipts": 100,
+  "negative_checks": 4,
+  "live_model_scores": 0
+}

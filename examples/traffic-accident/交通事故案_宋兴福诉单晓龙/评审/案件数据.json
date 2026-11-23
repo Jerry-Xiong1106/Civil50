@@ -1,0 +1,182 @@
+{
+  "task_id": "civil50-002",
+  "case_name": "宋兴福、单晓龙机动车交通事故责任纠纷民事一审民事判决书",
+  "currency": "CNY",
+  "initial_input": "车碰了以后，对方答应付修车钱。我想知道还该向他要多少，也想先好好谈。",
+  "facts": [
+    {
+      "name": "事故日期",
+      "value": "2021-09-03",
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "地点",
+      "value": "沈辽路杨市乡政府对面",
+      "field": "JudgeAccusation",
+      "status": "原告诉称"
+    },
+    {
+      "name": "责任",
+      "value": "被告全责，原告无责",
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "修车费",
+      "value": 4000,
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "保险公司已赔",
+      "value": 2000,
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "个人承诺余款",
+      "value": 2000,
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "个人赔付期限",
+      "value": "2021年10月5日前",
+      "field": "JudgeAccusation",
+      "status": "裁判查明"
+    },
+    {
+      "name": "判付修车款",
+      "value": 2000,
+      "field": "JudgeResult",
+      "status": "判决主文"
+    },
+    {
+      "name": "判决履行期限",
+      "value": "本判决生效之日起五日内",
+      "field": "JudgeResult",
+      "status": "判决主文"
+    },
+    {
+      "name": "案件受理费由被告负担",
+      "value": 50,
+      "field": "JudgeResult",
+      "status": "判决主文"
+    },
+    {
+      "name": "判后实际履行",
+      "value": null,
+      "field": null,
+      "status": "未知"
+    }
+  ],
+  "dialogue": [
+    {
+      "intent": "开场",
+      "example_question": "您最想解决的是什么事？",
+      "simulated_reply": "车碰了以后，对方答应付修车钱。我想知道还该向他要多少，也想先好好谈。",
+      "disclosure": "只给诉求；不主动说金额。",
+      "upload_on_request": null
+    },
+    {
+      "intent": "事故经过",
+      "example_question": "是哪一天、在哪里发生的？谁的车受损？",
+      "simulated_reply": "2021年9月3日，在沈辽路杨市乡政府对面，两车相撞，我的车受损。",
+      "disclosure": "地点属于原告陈述。问事实即可先口头答复。",
+      "upload_on_request": null
+    },
+    {
+      "intent": "事故责任",
+      "example_question": "交警有没有划分责任？可以看与事故有关的材料吗？",
+      "simulated_reply": "于洪交警大队认定对方负全责，我无责。我能提供一份案情摘记。",
+      "disclosure": "明确索取事故或损失材料时提供 M1。询问认定书原件时说明包内只有摘记。",
+      "upload_on_request": "M1"
+    },
+    {
+      "intent": "修车损失",
+      "example_question": "总共修了多少钱？这个数是修车总价还是现在未付的数？",
+      "simulated_reply": "修车费是4,000元，这是总数。",
+      "disclosure": "尚未问到赔付前，余额保持待核。",
+      "upload_on_request": null
+    },
+    {
+      "intent": "保险赔付",
+      "example_question": "这4,000元里，保险公司已经付过吗？付了多少？",
+      "simulated_reply": "对方的保险公司已经付了2,000元。",
+      "disclosure": "区分保险公司已付款与个人承诺款，两笔金额刚好相同。",
+      "upload_on_request": null
+    },
+    {
+      "intent": "个人承诺",
+      "example_question": "剩下的钱由谁承担？是口头说的还是有书面约定？能看材料吗？",
+      "simulated_reply": "剩下2,000元由对方个人赔。他出过书面协议，记录里写的是2021年10月5日前赔完。",
+      "disclosure": "明确索取协议或赔付记录时提供 M2；签署日、协议原文和签字状况仍须看原件。",
+      "upload_on_request": "M2"
+    },
+    {
+      "intent": "后续付款",
+      "example_question": "截至起诉前，对方个人后来又支付过吗？判决之后呢？",
+      "simulated_reply": "起诉前这笔余款没付。判决之后有没有付，我手头的资料没有记载。",
+      "disclosure": "分别记录两个时间点。若另收到付款凭证，先核对日期、收款人、用途，再调整余额。",
+      "upload_on_request": null
+    },
+    {
+      "intent": "核账确认",
+      "example_question": "按当时记录，4,000元修车费减去保险已付的2,000元，还剩2,000元向对方本人主张，对吗？",
+      "simulated_reply": "对。我想先请对方核账，别把保险已经赔的钱再算一次。",
+      "disclosure": "确认后才形成催告函。转入诉讼准备时，另核当事人身份、法院和附件。",
+      "upload_on_request": null
+    }
+  ],
+  "expected_calculation": {
+    "repair_total": 4000,
+    "insurer_paid": 2000,
+    "unpaid_at_adjudication": 2000,
+    "fee_separate": 50
+  },
+  "source": {
+    "repo": "YeFD/MileCut",
+    "url": "https://github.com/YeFD/MileCut/blob/e8e06dece41c2b5b2a84c0741861c3785935b68a/dataset/C3RD_mini/2.json",
+    "commit": "e8e06dece41c2b5b2a84c0741861c3785935b68a",
+    "file": "dataset/C3RD_mini/2.json",
+    "pointer": "/ctxs/25",
+    "CaseId": "047567ef221a42dcbd75aed300219be2",
+    "file_sha256": "2441dbdcb7755af708b9aa8ffac4c384094a6776dd3f0ea7af886868617ac96e",
+    "local_record_sha256": "6f6010b38976fdf13a415fe6c96e2321f72d7bec3a3a6d29b8a69b0a6914dc6c",
+    "verified_against_release": true,
+    "court_original_obtained": false
+  },
+  "documents": [
+    {
+      "path": "当事人材料/M1_事故及修车费用摘记.pdf",
+      "sha256": "80869ab8f929437502b0192747da4e1a63fdcf43c2a93050f1f3073b49ee2a8a",
+      "pages": 1
+    },
+    {
+      "path": "当事人材料/M2_赔付约定及收款摘记.pdf",
+      "sha256": "c23ff5d36351c9b3dc26bf96137bc3ff2c4878df3ae566e8578a4fc25cce0f95",
+      "pages": 1
+    },
+    {
+      "path": "文书/修车款催告函.pdf",
+      "sha256": "cbcac2af798bd93d80afb9d66c7c4d0ad1989df745fcdec854c0c373d64a6f5d",
+      "pages": 1
+    },
+    {
+      "path": "文书/民事起诉状.pdf",
+      "sha256": "ae45310137d925245347d53f154d40e904c6ea494971b816a04aefbe2bf16ef7",
+      "pages": 1
+    },
+    {
+      "path": "评审/民事判决_公开记录排印本.pdf",
+      "sha256": "0ceee0a3a9573dbe579ae569889c02505ec1a136ee98f757914bb7b8e806887c",
+      "pages": 2
+    },
+    {
+      "path": "评审/案件询问与参考答复.pdf",
+      "sha256": "b5baab7b619a53044bf4cb98de025b5564a69186b9ccb8252edf8afcf11eee99",
+      "pages": 2
+    }
+  ]
+}
