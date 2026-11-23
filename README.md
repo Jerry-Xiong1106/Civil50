@@ -55,4 +55,3 @@ sqlite3 -readonly civil50_v1/private/civil50.sqlite3 \
 - **SKYLENAGE-AI / DLawBench** 提供 3 案，数据许可为 CC BY 4.0。[上游仓库](https://github.com/SKYLENAGE-AI/DLawBench) · [数据许可](civil50_v1/licenses/DLawBench-data.txt)
 - **Civil50 整理工作**由 CivRA 评测任务发起，Codex 协助选案、核对上游来源、编制评测附件和追问脚本、建立评分与检索标注，并完成离线验证。来源台账保存固定提交、记录位置和校验和。[来源台账](civil50_v1/private/sources.csv)
 
-原始记录核对到了上游发布版本。评测附件、模拟问答和 PDF 文书包含按记录改编的内容，法院签章原件和当事人原始凭证尚未逐案独立核验。完整仓库用于私有研究备份，原始记录可能保留姓名，MileCut 收录的第三方裁判文本再分发授权未单列。
